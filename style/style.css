@@ -555,3 +555,37 @@ canvas {
     width: fit-content;
     white-space: nowrap;
 }
+
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100vw;   /* ✅ fix mobile layout */
+    }
+}
+
+@media screen and (max-width: 500px) {
+  /* Give the six scene more vertical room */
+  .container div.six {
+    top: 6vh;                 /* move slightly up */
+  }
+
+  /* Make the wish block fit on phone screens */
+  .wish {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .wish h5 {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 10px 0 0;
+    white-space: pre-line;    /* show \n\n */
+    word-break: break-word;
+
+    /* ✅ prevents clipping: scroll inside if needed */
+    max-height: 38vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
